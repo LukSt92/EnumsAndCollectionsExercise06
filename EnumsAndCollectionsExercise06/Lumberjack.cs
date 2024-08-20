@@ -20,10 +20,9 @@ namespace EnumsAndCollectionsExercise06
         }
         public void EatFlapjacks()
         {
-            foreach (Flapjack flapjack in flapjackStack)
-            {
-                Console.WriteLine($"{Name} ate a {flapjack} flapjack\n{flapjackStack.Pop()}");
-            }
+            Console.WriteLine($"{Name} is eating flapjacks");
+            while (flapjackStack.Count > 0)
+                Console.WriteLine($"{Name} ate a {flapjackStack.Pop().ToString().ToLower()} flapjack");
         }
     }
 }
